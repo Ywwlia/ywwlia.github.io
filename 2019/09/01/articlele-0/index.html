@@ -76,7 +76,7 @@
 <h2 id="Hexo-Github-Page"><a href="#Hexo-Github-Page" class="headerlink" title="Hexo +Github Page"></a>Hexo +Github Page</h2><p>记录一下我用到的教程和遇到的问题及解决办法：</p>
 <p><a href="https://www.bilibili.com/video/av36938592/?p=1" target="_blank" rel="noopener">【不定期更新】最新从零开始Github Pages +Hexo 搭建个人静态博客与Next主题个性化配置/up主：Moveeeeee</a></p>
 <p><a href="https://www.lixint.me/hexo-blog.html" target="_blank" rel="noopener">Moveeeeee的blog</a></p>
-<p>这个教程非常详细，完全适合我这种小白操作，教程里面hexo的版本是1.1.0，现在安装的hexo是2.0。教程中配置完SSH Key后，修改Hexo站点配置文件，然后hexo g生成页面，hexo d上传至Github。但hexo d时会出现一个类似于找不到global user name的问题。其实是少了一步配置：</p>
+<p>这个教程非常详细，完全适合我这种小白操作，教程里面hexo的版本是1.1.0，现在安装的hexo是2.0。教程中配置完SSH Key后，修改Hexo站点配置文件，然后hexo g生成页面，hexo d上传至Github。但hexo d时会出现一个类似于找不到global user name的问题。其实是少了一步配置。查了<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">另一个教程</a>，误打误撞找到了解决办法：</p>
 <blockquote>
 <p>$ git config –global user.name “liuxianan”// 你的github用户名，非昵称<br>$ git config –global user.email  “<a href="mailto:xxx@qq.com" target="_blank" rel="noopener">xxx@qq.com</a>“// 填写你的github注册邮箱</p>
 </blockquote>
@@ -85,6 +85,7 @@
 <p>我用了<a href="https://zhwangart.github.io/" target="_blank" rel="noopener">Ocean</a>这个主题，简单学习了一下如何修改主题，还没有学会（x</p>
 <p>其他功能以后用的时候再说吧（等等党的胜利（</p>
 <p>现在尝试发布第一篇blog，顺便学习了一下markdown语言。虽然之前用Bear也支持markdown，但是傻瓜操作，不需要记语言。赞美Bear（（</p>
+<p><img src="img/20190901212141.jpg" alt="header"></p>
 
       
     </div>
@@ -118,6 +119,8 @@
       <ul class="list-inline">
   
     <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
   
 </ul>
     </div>
