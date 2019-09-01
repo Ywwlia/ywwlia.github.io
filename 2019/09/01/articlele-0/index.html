@@ -7,6 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
+    Hello World |
     
     春明門裡</title>
   
@@ -21,43 +22,8 @@
 </html>
 <body>
 <main class="content">
-  <section class="jumbotron">
-  <div class="video">
-    
-      <div class="video-frame">
-        <img src="/images/ocean/overlay-hero.png" alt="Decorative image frame">
-      </div>
-    
-    <div class="video-media">
-      <video playsinline="" autoplay="" loop="" muted="" data-autoplay=""
-             poster="/images/ocean/ocean.png" x5-video-player-type="h5">
-        <source src="/images/ocean/ocean.mp4" type="video/mp4">
-        <source src="/images/ocean/ocean.ogv" type="video/ogg">
-        <source src="/images/ocean/ocean.webm" type="video/webm">
-        <p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-      <div class="video-overlay"></div>
-    </div>
-    <div class="video-inner text-center text-white">
-      <h1><a href="/">春明門裡</a></h1>
-      <p></p>
-      <div><img src="/shark-inverted.png" class="brand" alt="春明門裡"></div>
-    </div>
-    <div class="video-learn-more">
-      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
-    </div>
-  </div>
-</section>
-
-<div id="landingpage">
   <section class="outer">
-  <article class="articles">
-    
-    <h1 class="page-type-title"></h1>
-
-    
-      
-        
+  
 
 <article id="post-articlele-0" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
   
@@ -66,9 +32,9 @@
       <header class="article-header">
         
   
-    <h2 itemprop="name">
-      <a class="article-title" href="/2019/09/01/articlele-0/">Hello World</a>
-    </h2>
+    <h1 class="article-title" itemprop="name">
+      Hello World
+    </h1>
   
   
 
@@ -88,6 +54,14 @@
     
 
     
+      
+    <div class="tocbot"></div>
+
+
+
+
+
+    
 
     <div class="article-entry" itemprop="articleBody">
       
@@ -97,9 +71,21 @@
 
       
         <p>学习Github Page +Hexo 搭建博客</p>
-        
-          <a class="article-more-link" href="/2019/09/01/articlele-0/">阅读全文...</a>
-        
+<a id="more"></a>
+<p>之前debu推荐Gridea +Github Page的方式搭建blog，但是在Gridea远程连接的时候失败了。今天心血来潮，决定尝试一下Hexo。</p>
+<h2 id="Hexo-Github-Page"><a href="#Hexo-Github-Page" class="headerlink" title="Hexo +Github Page"></a>Hexo +Github Page</h2><p>记录一下我用到的教程和遇到的问题及解决办法：</p>
+<p><a href="https://www.bilibili.com/video/av36938592/?p=1" target="_blank" rel="noopener">【不定期更新】最新从零开始Github Pages +Hexo 搭建个人静态博客与Next主题个性化配置/up主：Moveeeeee</a></p>
+<p><a href="https://www.lixint.me/hexo-blog.html" target="_blank" rel="noopener">Moveeeeee的blog</a></p>
+<p>这个教程非常详细，完全适合我这种小白操作，教程里面hexo的版本是1.1.0，现在安装的hexo是2.0。教程中配置完SSH Key后，修改Hexo站点配置文件，然后hexo g生成页面，hexo d上传至Github。但hexo d时会出现一个类似于找不到global user name的问题。其实是少了一步配置：</p>
+<blockquote>
+<p>$ git config –global user.name “liuxianan”// 你的github用户名，非昵称<br>$ git config –global user.email  “<a href="mailto:xxx@qq.com" target="_blank" rel="noopener">xxx@qq.com</a>“// 填写你的github注册邮箱</p>
+</blockquote>
+<p>进行完这一步，再hexo g -d就搭建成功了。hexo s可以本地预览改改错别字（</p>
+<h2 id="Hexo主题"><a href="#Hexo主题" class="headerlink" title="Hexo主题"></a>Hexo主题</h2><p>Hexo官网上有很多好看的主题，选择比Gridea多一些，部分主题支持移动设备。</p>
+<p>我用了<a href="https://zhwangart.github.io/" target="_blank" rel="noopener">Ocean</a>这个主题，简单学习了一下如何修改主题，还没有学会（x</p>
+<p>其他功能以后用的时候再说吧（等等党的胜利（</p>
+<p>现在尝试发布第一篇blog，顺便学习了一下markdown语言。虽然之前用Bear也支持markdown，但是傻瓜操作，不需要记语言。赞美Bear（（</p>
+
       
     </div>
     <footer class="article-footer">
@@ -113,21 +99,19 @@
   </div>
 
   
+    
 
+  
+
+  
+    
   
 
 </article>
 
 
 
-      
-  </article>
-  
-
-  
 </section>
-</div>
-
   <footer class="footer">
   <div class="outer">
     <div class="float-right">
@@ -147,8 +131,8 @@
 
 </main>
 
-  <aside class="sidebar">
-    
+<aside class="sidebar sidebar-specter">
+  
     <button class="navbar-toggle"></button>
 <nav class="navbar">
   
@@ -213,6 +197,21 @@
   <script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
+
+  <script src="/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
 
 
 <script src="/js/ocean.js"></script>
