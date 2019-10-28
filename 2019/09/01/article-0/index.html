@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Hello World |
+    
+    春明門裡</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="outer">
+  
+
+<article id="post-article-0" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hello World
+    </h1>
+  
+  
+
+
+
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/09/01/article-0/" class="article-date">
+  <time datetime="2019-09-01T11:26:44.000Z" itemprop="datePublished">2019-09-01</time>
+</a>
+        
+      </div>
+    
+
+    
+      
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+        <p>学习Github Page +Hexo 搭建博客</p>
+<a id="more"></a>
+<p>之前debu推荐Gridea +Github Page的方式搭建blog，但是在Gridea远程连接的时候失败了。今天心血来潮，决定尝试一下Hexo。</p>
+<h2 id="Hexo-Github-Page"><a href="#Hexo-Github-Page" class="headerlink" title="Hexo +Github Page"></a>Hexo +Github Page</h2><p>记录一下我用到的教程和遇到的问题及解决办法：</p>
+<p><a href="https://www.bilibili.com/video/av36938592/?p=1" target="_blank" rel="noopener">【不定期更新】最新从零开始Github Pages +Hexo 搭建个人静态博客与Next主题个性化配置/up主：Moveeeeee</a></p>
+<p><a href="https://www.lixint.me/hexo-blog.html" target="_blank" rel="noopener">Moveeeeee的blog</a></p>
+<p>这个教程非常详细，完全适合我这种小白操作，教程里面hexo的版本是1.1.0，现在安装的hexo是2.0。教程中配置完SSH Key后，修改Hexo站点配置文件，然后hexo g生成页面，hexo d上传至Github。但hexo d时会出现一个类似于找不到global user name的问题。其实是少了一步配置。查了<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">另一个教程</a>，误打误撞找到了解决办法：</p>
+<blockquote>
+<p>$ git config –global user.name “liuxianan”// 你的github用户名，非昵称<br>$ git config –global user.email  “<a href="mailto:xxx@qq.com" target="_blank" rel="noopener">xxx@qq.com</a>“// 填写你的github注册邮箱</p>
+</blockquote>
+<p>进行完这一步，再hexo g -d就搭建成功了。hexo s可以本地预览改改错别字（</p>
+<h2 id="Hexo主题"><a href="#Hexo主题" class="headerlink" title="Hexo主题"></a>Hexo主题</h2><p>Hexo官网上有很多好看的主题，选择比Gridea多一些，部分主题支持移动设备。</p>
+<p>我用了<a href="https://zhwangart.github.io/" target="_blank" rel="noopener">Ocean</a>这个主题，简单学习了一下如何修改主题，还没有学会（x</p>
+<p>其他功能以后用的时候再说吧（等等党的胜利（</p>
+<p>现在尝试发布第一篇blog，顺便学习了一下markdown语言。虽然之前用Bear也支持markdown，但是傻瓜操作，不需要记语言。赞美Bear（（</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ywwlia.github.io/2019/09/01/article-0/" data-id="ck2a4a69g0000kgtbds636lw0"
+         class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github-Page/">Github Page</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+      <a href="/2019/09/02/article-1/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            虾虾和他的好朋友炸猪排
+          
+        </div>
+      </a>
+    
+    
+  </nav>
+
+
+  
+
+  
+    
+  
+
+  
+
+</article>
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2019 春明門裡</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+
+<aside class="sidebar sidebar-specter">
+  
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/favicon.ico" alt="春明門裡"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+</html>
