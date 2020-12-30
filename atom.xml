@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ywwlia.github.io/"/>
-  <updated>2020-12-01T16:40:47.665Z</updated>
+  <updated>2020-12-30T05:48:45.469Z</updated>
   <id>https://ywwlia.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>年终忆初春游太白山记</title>
+    <link href="https://ywwlia.github.io/2020/12/30/article-13/"/>
+    <id>https://ywwlia.github.io/2020/12/30/article-13/</id>
+    <published>2020-12-30T05:42:34.000Z</published>
+    <updated>2020-12-30T05:48:45.469Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2020年第一次郊游&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="游记" scheme="https://ywwlia.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
+    
+    
+      <category term="太白山" scheme="https://ywwlia.github.io/tags/%E5%A4%AA%E7%99%BD%E5%B1%B1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>八方旅人（上）</title>
     <link href="https://ywwlia.github.io/2020/12/01/article-12/"/>
     <id>https://ywwlia.github.io/2020/12/01/article-12/</id>
     <published>2020-12-01T14:38:55.000Z</published>
-    <updated>2020-12-01T16:40:47.665Z</updated>
+    <updated>2020-12-30T05:52:38.614Z</updated>
     
     <summary type="html">
     
@@ -29,10 +49,10 @@
     
     </summary>
     
-      <category term="NS游戏" scheme="https://ywwlia.github.io/categories/NS%E6%B8%B8%E6%88%8F/"/>
+      <category term="游戏" scheme="https://ywwlia.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-      <category term="游戏" scheme="https://ywwlia.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+      <category term="NS游戏" scheme="https://ywwlia.github.io/tags/NS%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
@@ -139,13 +159,15 @@
     <link href="https://ywwlia.github.io/2020/04/28/article-7/"/>
     <id>https://ywwlia.github.io/2020/04/28/article-7/</id>
     <published>2020-04-27T21:13:19.000Z</published>
-    <updated>2020-04-27T21:24:55.232Z</updated>
+    <updated>2020-12-30T05:54:17.752Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;假装追星女孩，却永远无法感同身受。&lt;/p&gt;
     
     </summary>
+    
+      <category term="日常流水账" scheme="https://ywwlia.github.io/categories/%E6%97%A5%E5%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/"/>
     
     
       <category term="偶像" scheme="https://ywwlia.github.io/tags/%E5%81%B6%E5%83%8F/"/>
@@ -157,7 +179,7 @@
     <link href="https://ywwlia.github.io/2020/02/29/article-6/"/>
     <id>https://ywwlia.github.io/2020/02/29/article-6/</id>
     <published>2020-02-29T05:22:22.000Z</published>
-    <updated>2020-02-29T05:34:07.597Z</updated>
+    <updated>2020-12-30T05:53:35.689Z</updated>
     
     <summary type="html">
     
@@ -165,8 +187,10 @@
     
     </summary>
     
+      <category term="游戏" scheme="https://ywwlia.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
     
-      <category term="游戏" scheme="https://ywwlia.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+      <category term="NS游戏" scheme="https://ywwlia.github.io/tags/NS%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
@@ -175,7 +199,7 @@
     <link href="https://ywwlia.github.io/2020/01/31/article-5/"/>
     <id>https://ywwlia.github.io/2020/01/31/article-5/</id>
     <published>2020-01-30T19:09:06.000Z</published>
-    <updated>2020-02-29T05:35:45.279Z</updated>
+    <updated>2020-12-30T05:50:49.035Z</updated>
     
     <summary type="html">
     
@@ -183,7 +207,7 @@
     
     </summary>
     
-      <category term="唐代建筑与石窟寺" scheme="https://ywwlia.github.io/categories/%E5%94%90%E4%BB%A3%E5%BB%BA%E7%AD%91%E4%B8%8E%E7%9F%B3%E7%AA%9F%E5%AF%BA/"/>
+      <category term="游记" scheme="https://ywwlia.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
     
     
       <category term="南禅寺" scheme="https://ywwlia.github.io/tags/%E5%8D%97%E7%A6%85%E5%AF%BA/"/>
@@ -194,6 +218,8 @@
     
       <category term="皇城相府" scheme="https://ywwlia.github.io/tags/%E7%9A%87%E5%9F%8E%E7%9B%B8%E5%BA%9C/"/>
     
+      <category term="唐代建筑与石窟寺" scheme="https://ywwlia.github.io/tags/%E5%94%90%E4%BB%A3%E5%BB%BA%E7%AD%91%E4%B8%8E%E7%9F%B3%E7%AA%9F%E5%AF%BA/"/>
+    
   </entry>
   
   <entry>
@@ -201,13 +227,15 @@
     <link href="https://ywwlia.github.io/2020/01/20/article-4/"/>
     <id>https://ywwlia.github.io/2020/01/20/article-4/</id>
     <published>2020-01-20T11:59:39.000Z</published>
-    <updated>2020-01-30T11:06:45.487Z</updated>
+    <updated>2020-12-30T05:51:56.616Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;-2019年终总结-&lt;br&gt;-2020新年计划-&lt;/p&gt;
     
     </summary>
+    
+      <category term="年终总结" scheme="https://ywwlia.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     
     
       <category term="2019" scheme="https://ywwlia.github.io/tags/2019/"/>
@@ -223,13 +251,15 @@
     <link href="https://ywwlia.github.io/2019/11/17/article-3/"/>
     <id>https://ywwlia.github.io/2019/11/17/article-3/</id>
     <published>2019-11-17T06:38:21.000Z</published>
-    <updated>2019-12-04T06:34:26.373Z</updated>
+    <updated>2020-12-30T05:55:39.939Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;独立之精神，自由之思想。&lt;/p&gt;
     
     </summary>
+    
+      <category term="日常流水账" scheme="https://ywwlia.github.io/categories/%E6%97%A5%E5%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/"/>
     
     
   </entry>
@@ -239,7 +269,7 @@
     <link href="https://ywwlia.github.io/2019/10/23/article-2/"/>
     <id>https://ywwlia.github.io/2019/10/23/article-2/</id>
     <published>2019-10-22T17:07:14.000Z</published>
-    <updated>2019-10-23T09:50:05.610Z</updated>
+    <updated>2020-12-30T05:50:34.172Z</updated>
     
     <summary type="html">
     
@@ -247,7 +277,7 @@
     
     </summary>
     
-      <category term="唐代建筑与石窟寺" scheme="https://ywwlia.github.io/categories/%E5%94%90%E4%BB%A3%E5%BB%BA%E7%AD%91%E4%B8%8E%E7%9F%B3%E7%AA%9F%E5%AF%BA/"/>
+      <category term="游记" scheme="https://ywwlia.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
     
     
       <category term="广仁王庙" scheme="https://ywwlia.github.io/tags/%E5%B9%BF%E4%BB%81%E7%8E%8B%E5%BA%99/"/>
@@ -256,6 +286,8 @@
     
       <category term="芮城城隍庙" scheme="https://ywwlia.github.io/tags/%E8%8A%AE%E5%9F%8E%E5%9F%8E%E9%9A%8D%E5%BA%99/"/>
     
+      <category term="唐代建筑与石窟寺" scheme="https://ywwlia.github.io/tags/%E5%94%90%E4%BB%A3%E5%BB%BA%E7%AD%91%E4%B8%8E%E7%9F%B3%E7%AA%9F%E5%AF%BA/"/>
+    
   </entry>
   
   <entry>
@@ -263,13 +295,15 @@
     <link href="https://ywwlia.github.io/2019/09/02/article-1/"/>
     <id>https://ywwlia.github.io/2019/09/02/article-1/</id>
     <published>2019-09-01T16:50:09.000Z</published>
-    <updated>2019-10-23T07:33:06.344Z</updated>
+    <updated>2020-12-30T05:55:22.893Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;女仆虾虾【角落生物展七周年限定】&lt;br&gt;大厨猪排和虾虾【8月shop限定】&lt;/p&gt;
     
     </summary>
+    
+      <category term="日常流水账" scheme="https://ywwlia.github.io/categories/%E6%97%A5%E5%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/"/>
     
     
       <category term="虾虾" scheme="https://ywwlia.github.io/tags/%E8%99%BE%E8%99%BE/"/>
@@ -283,13 +317,15 @@
     <link href="https://ywwlia.github.io/2019/09/01/article-0/"/>
     <id>https://ywwlia.github.io/2019/09/01/article-0/</id>
     <published>2019-09-01T11:26:44.000Z</published>
-    <updated>2019-09-01T16:52:09.486Z</updated>
+    <updated>2020-12-30T05:55:19.057Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;学习Github Page +Hexo 搭建博客&lt;/p&gt;
     
     </summary>
+    
+      <category term="日常流水账" scheme="https://ywwlia.github.io/categories/%E6%97%A5%E5%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/"/>
     
     
       <category term="Hexo" scheme="https://ywwlia.github.io/tags/Hexo/"/>
