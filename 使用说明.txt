@@ -1,0 +1,11 @@
+HEXO文件夹
+右键-GIT BASH HERE
+hexo new post article-n【新建post】
+hexo s 预览
+hexo g + hexo d 更新blog
+hexo c【hexo clean-清除public】
+当source文件夹中的部分资源更改过之后，特别是对文件进行了删除或者路径的改变之后，需要执行这个命令，然后重新编译。
+
+图片放入/source/images
+![图片描述](/images/图片名称（英文orshuzi）.jpg "文字说明")
+
