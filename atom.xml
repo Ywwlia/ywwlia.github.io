@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ywwlia.github.io/"/>
-  <updated>2021-12-31T12:35:30.650Z</updated>
+  <updated>2022-11-08T19:14:14.213Z</updated>
   <id>https://ywwlia.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>客制化键盘入坑记</title>
+    <link href="https://ywwlia.github.io/2022/11/08/article-16/"/>
+    <id>https://ywwlia.github.io/2022/11/08/article-16/</id>
+    <published>2022-11-08T15:02:20.000Z</published>
+    <updated>2022-11-08T19:14:14.213Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;此刻，我正在用Libra mini写下这篇Blog&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2021→2022</title>
