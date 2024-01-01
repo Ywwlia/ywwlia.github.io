@@ -1,5 +1,43 @@
 HEXO文件夹
 右键-GIT BASH HERE
+
+安装环境
+node.js
+git
+
+--- 
+换电脑后迁移hexo博客
+来源：https://blog.csdn.net/qq_36667170/article/details/118163563
+
+安装hexo
+npm install -g hexo-cli
+如果无法安装可常识
+npx install hexo
+
+然后安装依赖
+npm install
+执行完了以后看一下目录里已经出现node_modules文件夹
+下载hexo的git工具
+npm install hexo-deployer-git --save
+下载完成以后就可以正常使用了
+hexo clean
+hexo d
+
+---
+
+新电脑需要初始化设置hexo 
+npm hexo init
+也可以执行命令
+npx hexo init
+
+后续之下npm报错时也可将npm转换为npx执行，npm与npx的区别，简单说就是npx可以调用仓库寻找本地没有的文件
+
+npx说明：
+https://blog.csdn.net/m0_62068678/article/details/127022835?spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-7-127022835-blog-100852221.235%5Ev39%5Epc_relevant_default_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-7-127022835-blog-100852221.235%5Ev39%5Epc_relevant_default_base&utm_relevant_index=14
+
+---
+
+更新blog
 hexo new post article-n【新建post】
 hexo s 预览
 hexo g + hexo d 更新blog
@@ -8,6 +46,15 @@ hexo c【hexo clean-清除public】
 
 图片放入/source/images
 ![图片描述](/images/图片名称（英文orshuzi）.jpg "文字说明")
+
+Tips:不要忘了，每次写完最好都把源文件上传一下
+git add .
+git commit –m "xxxx"
+git push 
+
+如果是在已经编辑过的电脑上，已经有clone文件夹了，那么，每次只要和远端同步一下就行了
+git pull
+
 
 
 更换电脑的操作
@@ -60,4 +107,9 @@ git push
 
 如果是在已经编辑过的电脑上，已经有clone文件夹了，那么，每次只要和远端同步一下就行了
 git pull
+
+---
+
+重装系统配置hexo
+https://zhuanlan.zhihu.com/p/348616082
 
