@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    更新Blog域名 |
+    
+    春明門裡</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+  <meta name="robots" content="noindex">
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="outer">
+  
+
+<article id="post-article-17" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      更新Blog域名
+    </h1>
+  
+  
+
+
+
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2026/05/06/article-17/" class="article-date">
+  <time datetime="2026-05-05T17:13:21.000Z" itemprop="datePublished">2026-05-06</time>
+</a>
+        
+      </div>
+    
+
+    
+      
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+        <p>一次艰难的更新……</p>
+<a id="more"></a>
+<p>突然想起来Blog域名过期了，之前也发生过类似情况，但是当时发现的比较及时，只需要续费就行。这次过期太久需要重新绑定域名到github。<br>按照惯例搜索namesilo教程，但是namesilo页面改版，对于小白来说老教程基本无法使用。遂一边检索，一边求助d老师，kimi提问一次就算力不足，差评！</p>
+<p>namesilo页面改版以后，这个教程里面apply github是最简单的操作<br><a href="https://zhuanlan.zhihu.com/p/448781791" target="_blank" rel="noopener">将自己的域名绑定在GitHub的个人网页库中（以namesilo为例） - 知乎</a></p>
+<p>因为我的域名没有发生变化，所以其他操作都不用执行。<br>但是github page check custom domain会遇到这个问题：</p>
+<blockquote>
+<p>Both iulia.moe and its alternate name are improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).</p>
+</blockquote>
+<p>因为我是旧域名过期，所以可能出现的问题有：</p>
+<ul>
+<li><strong>DNS 缓存还没刷新</strong><br>即使你改对了，全球 DNS 查询需要时间。你本地打开可能看到旧结果，GitHub 的检查服务器也可能暂未刷新。通常等 5～10 分钟再试，或清除本地 DNS 缓存（<code>ipconfig /flushdns</code>）。</li>
+<li><strong>NameSilo 上的 DNS 记录根本还没设置正确</strong><br>新买的域名，默认可能会解析到 NameSilo 的停放页，而不是 GitHub。你需要保证在 NameSilo 里已经按前面说的，添加了那 4 条 A 记录，或者指向 <code>你的用户名.github.io</code> 的 CNAME。</li>
+</ul>
+<p>我先等了一会，ping了一下，dns缓存刷新后，重新在github page 页面remove iulia.moe，重新输入iulia.moe save<br>又出现了一个新问题：</p>
+<blockquote>
+<p><a href="http://www.iulia.moe" target="_blank" rel="noopener">www.iulia.moe</a> is improperly configured Your site’s DNS settings are using a custom subdomain, <a href="http://www.iulia.moe" target="_blank" rel="noopener">www.iulia.moe</a>, that is set up as an A record. We recommend you change this to a CNAME record pointing to ywwlia.github.io. For more information, see documentation (InvalidARecordError).</p>
+</blockquote>
+<p>求助d老师后：</p>
+<p>这个新报错直接把问题点明了：你的 <code>www.iulia.moe</code> 目前在 NameSilo 上被设置成了 <strong>A 记录</strong>，但 GitHub 要求子域名必须用 <strong>CNAME 记录</strong> 指向 <code>ywwlia.github.io</code>。</p>
+<p>解决起来很简单，只需要去 NameSilo 修改一下 <code>www</code> 的记录类型即可。</p>
+<hr>
+<h3 id="🛠️-操作步骤"><a href="#🛠️-操作步骤" class="headerlink" title="🛠️ 操作步骤"></a>🛠️ 操作步骤</h3><ol>
+<li><p><strong>登录 NameSilo 并进入 DNS 管理</strong></p>
+<ul>
+<li><p>登录你的 NameSilo 账户，点击右上角 <code>My Account</code>。</p>
+</li>
+<li><p>在 <code>Domain Manager</code> 列表中找到 <code>iulia.moe</code>，点击旁边的<strong>蓝色小球图标</strong>（<code>Manage DNS</code>）。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>修改 <code>www</code> 的记录</strong></p>
+<ul>
+<li><p>在记录列表里，找到主机记录（Host）为 <code>www</code> 的那一条。</p>
+</li>
+<li><p>如果它的类型（Type）是 <strong>A</strong>，请<strong>删除</strong>这一条。</p>
+</li>
+<li><p>然后点击添加新记录，选择类型为 <strong>CNAME</strong>，主机记录填 <code>www</code>，记录值 (Value) 填：<code>ywwlia.github.io</code>（注意末尾不要有空格）。</p>
+</li>
+<li><p>点击 <code>Submit</code> (提交) 保存。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>确认根域名的 A 记录保持不变</strong></p>
+<ul>
+<li>确保主机记录为 <code>@</code> 或 <code>iulia.moe</code> 的那 4 条 A 记录仍然存在，分别指向 GitHub 的那四个 IP。</li>
+</ul>
+</li>
+</ol>
+<p>回到github page重新check custom domain，就成功了。</p>
+<hr>
+<p>因为寒假给我的陈年老台式机重新安装了win11，准备更新blog的时候发现没有node.js和git，部署以后仍有问题，才意识到没部署npm和hexo。<br>hexo部署好以后generate有问题，主要是原有hexo使用的node v10.13.0，git v2.19.1，hexo旧框架和新版node有冲突。于是在d老师指导下一直在调整这个问题。<br>经历几次报错，终于修改好了node_module&gt;hexo-front-matter&gt;lib&gt;front_matter.js里isDate的问题。<br>deploy的时候又出现了问题。<br>经过一番操作，最后还是卸载了最新版node改用node v10.13.0，又经过一番报错纠错，终于成功了。<br>一方面觉得太艰难了，一方面又觉得多亏有ai，只需要在ai指导下一步一步纠错，不需要自己人工检索省事很多。真的要好好学习使用ai了，不然马上要被社会淘汰了（抹泪<br>虽然我们行业对ai的反应还非常迟缓……还能苟一段时间……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ywwlia.github.io/2026/05/06/article-17/" data-id="cmosw53nz000udgvog8867m6q"
+         class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+    
+      <a href="/2022/11/08/article-16/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">客制化键盘入坑记</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  
+
+  
+	<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "bqg6MIGxvXY0sGrOJ3vC9pOu-MdYXbMMI",
+            app_key: "bIXkk9pD9eKEzTkgKxJVxIyV",
+            placeholder: "gkd！留言",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+
+</article>
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2026 春明門裡</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+
+<aside class="sidebar sidebar-specter">
+  
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/favicon.ico" alt="春明門裡"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+</html>
