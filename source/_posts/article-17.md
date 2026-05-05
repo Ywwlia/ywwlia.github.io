@@ -150,7 +150,7 @@ deploy的时候又出现了问题。
 >\# 编辑 source/\_posts/article-n.md
 >hexo clean && hexo generate && hexo deploy   \# 更新线上网站
 >git add .
->git commit \-m "发布新文章：article-n"
+>git commit \-m "更新文章 article-n"
 >git push origin hexo                        \# 把源码同步到 GitHub
 
 ##### 换到电脑B时，先拉取最新源码
