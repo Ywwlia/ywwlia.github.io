@@ -163,7 +163,7 @@
 <h4 id="✍️-日常协作流程"><a href="#✍️-日常协作流程" class="headerlink" title="✍️ 日常协作流程"></a>✍️ 日常协作流程</h4><p>假设你在 <strong>电脑A</strong> 写完文章，<strong>电脑B</strong> 想继续写，流程如下：</p>
 <h5 id="在电脑A上写完并发布"><a href="#在电脑A上写完并发布" class="headerlink" title="在电脑A上写完并发布"></a>在电脑A上写完并发布</h5><blockquote>
 <p>bash</p>
-<p>cd D:\Hexo<br>hexo new post “我的文章”<br># 编辑 source/_posts/我的文章.md<br>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy   # 更新线上网站<br>git add .<br>git commit -m “发布新文章：我的文章”<br>git push origin hexo                        # 把源码同步到 GitHub</p>
+<p>cd D:\Hexo<br>hexo new post “article-n”<br># 编辑 source/_posts/article-n.md<br>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy   # 更新线上网站<br>git add .<br>git commit -m “发布新文章：article-n”<br>git push origin hexo                        # 把源码同步到 GitHub</p>
 </blockquote>
 <h5 id="换到电脑B时，先拉取最新源码"><a href="#换到电脑B时，先拉取最新源码" class="headerlink" title="换到电脑B时，先拉取最新源码"></a>换到电脑B时，先拉取最新源码</h5><blockquote>
 <p>bash</p>
@@ -192,11 +192,41 @@
 <li><p>只要坚持“先 pull 再写”的纪律，两台电脑（甚至更多）都能无缝切换。</p>
 </li>
 </ul>
+<hr>
+<h2 id="📋-回顾：你现在拥有的完整工作流"><a href="#📋-回顾：你现在拥有的完整工作流" class="headerlink" title="📋 回顾：你现在拥有的完整工作流"></a>📋 回顾：你现在拥有的完整工作流</h2><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. 写文章</td>
+<td><code>hexo new post &quot;标题&quot;</code></td>
+<td>创建新文章</td>
+</tr>
+<tr>
+<td>2. 编辑</td>
+<td>用编辑器修改 <code>source/_posts/xxx.md</code></td>
+<td>撰写内容</td>
+</tr>
+<tr>
+<td>3. 部署网站</td>
+<td><code>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</code></td>
+<td>更新线上博客 (<code>master</code> 分支)</td>
+</tr>
+<tr>
+<td>4. 备份源码</td>
+<td><code>git add . &amp;&amp; git commit -m &quot;备注&quot; &amp;&amp; git push origin hexo</code></td>
+<td>同步文章源文件 (<code>hexo</code> 分支)</td>
+</tr>
+</tbody></table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ywwlia.github.io/2026/05/06/article-17/" data-id="cmosw8dgh000q6kvo1bhfro5g"
+      <a data-url="https://ywwlia.github.io/2026/05/06/article-17/" data-id="cmoszaiza002cxwvomvppkid0"
          class="article-share-link">分享</a>
       
     </footer>
