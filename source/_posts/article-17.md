@@ -199,7 +199,8 @@ deploy的时候又出现了问题。
 
 |操作|命令|作用|
 |---|---|---|
-|1. 写文章|`hexo new post "标题"`|创建新文章|
-|2. 编辑|用编辑器修改 `source/_posts/xxx.md`|撰写内容|
-|3. 部署网站|`hexo clean && hexo generate && hexo deploy`|更新线上博客 (`master` 分支)|
-|4. 备份源码|`git add . && git commit -m "备注" && git push origin hexo`|同步文章源文件 (`hexo` 分支)|
+|1.同步其他电脑文章|`git pull origin hexo`\获取其他电脑的最新文章|
+|2. 写文章|`hexo new post "标题"`|创建新文章|
+|3. 编辑|用编辑器修改 `source/_posts/xxx.md`|撰写内容|
+|4. 部署网站|`hexo clean && hexo generate && hexo deploy`|更新线上博客 (`master` 分支)|
+|5. 备份源码|`git add . && git commit -m "备注" && git push origin hexo`|同步文章源文件 (`hexo` 分支)||
