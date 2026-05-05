@@ -186,27 +186,26 @@
 <h2 id="域名更新"><a href="#域名更新" class="headerlink" title="域名更新"></a>域名更新</h2><p>namesilo页面改版以后，这个教程里面apply github是最简单的操作<br><a href="https://zhuanlan.zhihu.com/p/448781791" target="_blank" rel="noopener">将自己的域名绑定在GitHub的个人网页库中（以namesilo为例） - 知乎</a></p>
 <p>因为我的域名没有发生变化，所以其他操作都不用执行。<br>但是github page check custom domain会遇到这个问题：</p>
 <blockquote>
-<p>Both iulia.moe and its alternate name are improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).</p>
+<p>Both 新域名 and its alternate name are improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).</p>
 </blockquote>
 <p>因为我是旧域名过期，所以可能出现的问题有：</p>
 <ul>
 <li><strong>DNS 缓存还没刷新</strong><br>即使你改对了，全球 DNS 查询需要时间。你本地打开可能看到旧结果，GitHub 的检查服务器也可能暂未刷新。通常等 5～10 分钟再试，或清除本地 DNS 缓存（<code>ipconfig /flushdns</code>）。</li>
 <li><strong>NameSilo 上的 DNS 记录根本还没设置正确</strong><br>新买的域名，默认可能会解析到 NameSilo 的停放页，而不是 GitHub。你需要保证在 NameSilo 里已经按前面说的，添加了那 4 条 A 记录，或者指向 <code>你的用户名.github.io</code> 的 CNAME。</li>
 </ul>
-<p>我先等了一会，ping了一下，dns缓存刷新后，重新在github page 页面remove iulia.moe，重新输入iulia.moe save<br>又出现了一个新问题：</p>
+<p>我先等了一会，ping了一下，dns缓存刷新后，重新在github page 页面remove 旧域名，重新输入 新域名 save<br>又出现了一个新问题：</p>
 <blockquote>
-<p><a href="http://www.iulia.moe" target="_blank" rel="noopener">www.iulia.moe</a> is improperly configured Your site’s DNS settings are using a custom subdomain, <a href="http://www.iulia.moe" target="_blank" rel="noopener">www.iulia.moe</a>, that is set up as an A record. We recommend you change this to a CNAME record pointing to ywwlia.github.io. For more information, see documentation (InvalidARecordError).</p>
+<p>www.新域名 is improperly configured Your site’s DNS settings are using a custom subdomain, www.新域名, that is set up as an A record. We recommend you change this to a CNAME record pointing to 你的用户名.github.io. For more information, see documentation (InvalidARecordError).</p>
 </blockquote>
 <p>求助d老师后：</p>
-<p>这个新报错直接把问题点明了：你的 <code>www.iulia.moe</code> 目前在 NameSilo 上被设置成了 <strong>A 记录</strong>，但 GitHub 要求子域名必须用 <strong>CNAME 记录</strong> 指向 <code>ywwlia.github.io</code>。</p>
+<p>这个新报错直接把问题点明了：你的 <code>www.新域名</code> 目前在 NameSilo 上被设置成了 <strong>A 记录</strong>，但 GitHub 要求子域名必须用 <strong>CNAME 记录</strong> 指向 <code>你的用户名.github.io</code>。</p>
 <p>解决起来很简单，只需要去 NameSilo 修改一下 <code>www</code> 的记录类型即可。</p>
-<hr>
 <h3 id="🛠️-操作步骤"><a href="#🛠️-操作步骤" class="headerlink" title="🛠️ 操作步骤"></a>🛠️ 操作步骤</h3><ol>
 <li><p><strong>登录 NameSilo 并进入 DNS 管理</strong></p>
 <ul>
 <li><p>登录你的 NameSilo 账户，点击右上角 <code>My Account</code>。</p>
 </li>
-<li><p>在 <code>Domain Manager</code> 列表中找到 <code>iulia.moe</code>，点击旁边的<strong>蓝色小球图标</strong>（<code>Manage DNS</code>）。</p>
+<li><p>在 <code>Domain Manager</code> 列表中找到 <code>新域名</code>，点击旁边的<strong>蓝色小球图标</strong>（<code>Manage DNS</code>）。</p>
 </li>
 </ul>
 </li>
@@ -216,7 +215,7 @@
 </li>
 <li><p>如果它的类型（Type）是 <strong>A</strong>，请<strong>删除</strong>这一条。</p>
 </li>
-<li><p>然后点击添加新记录，选择类型为 <strong>CNAME</strong>，主机记录填 <code>www</code>，记录值 (Value) 填：<code>ywwlia.github.io</code>（注意末尾不要有空格）。</p>
+<li><p>然后点击添加新记录，选择类型为 <strong>CNAME</strong>，主机记录填 <code>www</code>，记录值 (Value) 填：<code>你的用户名.github.io</code>（注意末尾不要有空格）。</p>
 </li>
 <li><p>点击 <code>Submit</code> (提交) 保存。</p>
 </li>
@@ -224,14 +223,30 @@
 </li>
 <li><p><strong>确认根域名的 A 记录保持不变</strong></p>
 <ul>
-<li>确保主机记录为 <code>@</code> 或 <code>iulia.moe</code> 的那 4 条 A 记录仍然存在，分别指向 GitHub 的那四个 IP。</li>
+<li>确保主机记录为 <code>@</code> 或 <code>新域名</code> 的那 4 条 A 记录仍然存在，分别指向 GitHub 的那四个 IP。</li>
 </ul>
 </li>
 </ol>
 <p>回到github page重新check custom domain，就成功了。</p>
 <hr>
 <h2 id="老电脑重装win11系统后重新部署Hexo"><a href="#老电脑重装win11系统后重新部署Hexo" class="headerlink" title="老电脑重装win11系统后重新部署Hexo"></a>老电脑重装win11系统后重新部署Hexo</h2><p>因为寒假给我的陈年老台式机重新安装了win11，准备更新blog的时候发现没有node.js和git，部署以后仍有问题，才意识到没部署npm和hexo。<br>hexo部署好以后generate有问题，主要是原有hexo使用的node v10.13.0，git v2.19.1，hexo旧框架和新版node有冲突。于是在d老师指导下一直在调整这个问题。<br>经历几次报错，终于修改好了node_module&gt;hexo-front-matter&gt;lib&gt;front_matter.js里isDate的问题。<br>deploy的时候又出现了问题。<br>经过一番操作，最后还是卸载了最新版node改用node v10.13.0，又经过一番报错纠错，终于成功了。<br>一方面觉得太艰难了，一方面又觉得多亏有ai，只需要在ai指导下一步一步纠错，不需要自己人工检索省事很多。真的要好好学习使用ai了，不然马上要被社会淘汰了（抹泪<br>虽然我们行业对ai的反应还非常迟缓……还能苟一段时间……</p>
-<h2 id="多台电脑更新Blog"><a href="#多台电脑更新Blog" class="headerlink" title="多台电脑更新Blog"></a>多台电脑更新Blog</h2><h3 id="新电脑部署Hexo"><a href="#新电脑部署Hexo" class="headerlink" title="新电脑部署Hexo"></a>新电脑部署Hexo</h3><h4 id="🖥️-每台新电脑的初始安装（两台都做一遍）"><a href="#🖥️-每台新电脑的初始安装（两台都做一遍）" class="headerlink" title="🖥️ 每台新电脑的初始安装（两台都做一遍）"></a>🖥️ 每台新电脑的初始安装（两台都做一遍）</h4><ol>
+<hr>
+<h2 id="多台电脑更新Blog"><a href="#多台电脑更新Blog" class="headerlink" title="多台电脑更新Blog"></a>多台电脑更新Blog</h2><h3 id="🖥️-第一部分：在当前电脑上备份源码到-GitHub"><a href="#🖥️-第一部分：在当前电脑上备份源码到-GitHub" class="headerlink" title="🖥️ 第一部分：在当前电脑上备份源码到 GitHub"></a>🖥️ 第一部分：在当前电脑上备份源码到 GitHub</h3><p>1️⃣ 为源码创建 Git 仓库并关联远程<br>打开 Git Bash，进入 Hexo 博客目录：</p>
+<blockquote>
+<p>bash</p>
+<p>cd D:\Hexo<br>git init</p>
+</blockquote>
+<p>2️⃣ 创建 .gitignore 文件（防止把不需要的文件传上去）</p>
+<blockquote>
+<p>bash</p>
+<p>echo “node_modules/“ &gt;&gt; .gitignore<br>echo “public/“ &gt;&gt; .gitignore<br>echo “.deploy_git/“ &gt;&gt; .gitignore<br>echo “db.json” &gt;&gt; .gitignore<br>这样只会把文章、主题、配置等核心文件传到 GitHub，不会上传生成的文件和依赖包。</p>
+</blockquote>
+<p>3️⃣ 将源码推送到 GitHub<br>注意： 你的用户名.github.io 仓库的主分支已经被网站文件占用，所以不能用主分支。我们创建一个新分支 hexo 来存源码。</p>
+<blockquote>
+<p>bash</p>
+<p>git add .<br>git commit -m “备份 Hexo 源码”<br>git branch -M hexo<br>git remote add origin <a href="https://github.com/你的用户名/你的用户名.github.io.git" target="_blank" rel="noopener">https://github.com/你的用户名/你的用户名.github.io.git</a><br>git push -u origin hexo<br>推送时会提示输入用户名和 个人访问令牌（和之前部署时一样）。</p>
+</blockquote>
+<h3 id="🖥️-第二部分：多台新电脑部署Hexo"><a href="#🖥️-第二部分：多台新电脑部署Hexo" class="headerlink" title="🖥️ 第二部分：多台新电脑部署Hexo"></a>🖥️ 第二部分：多台新电脑部署Hexo</h3><h4 id="🖥️-每台新电脑的初始安装（每台都做一遍）"><a href="#🖥️-每台新电脑的初始安装（每台都做一遍）" class="headerlink" title="🖥️ 每台新电脑的初始安装（每台都做一遍）"></a>🖥️ 每台新电脑的初始安装（每台都做一遍）</h4><ol>
 <li><p><strong>安装 Git</strong> 和 <strong>Node.js v10.13.0</strong>（从 <a href="https://nodejs.org/download/release/v10.13.0/node-v10.13.0-x64.msi" target="_blank" rel="noopener">https://nodejs.org/download/release/v10.13.0/node-v10.13.0-x64.msi</a> 下载）</p>
 </li>
 <li><p><strong>安装 Hexo 命令行工具</strong>：</p>
@@ -243,7 +258,7 @@
 <li><p><strong>克隆源码</strong>（在 Git Bash 中）：</p>
 <blockquote>
 <p>bash</p>
-<p>git clone -b hexo <a href="https://github.com/Ywwlia/ywwlia.github.io.git" target="_blank" rel="noopener">https://github.com/Ywwlia/ywwlia.github.io.git</a> Hexo<br>cd Hexo<br>npm install</p>
+<p>git clone -b hexo <a href="https://github.com/你的用户名/你的用户名.github.io.git" target="_blank" rel="noopener">https://github.com/你的用户名/你的用户名.github.io.git</a> Hexo<br>cd Hexo<br>npm install</p>
 </blockquote>
 </li>
 <li><p><strong>配置 Git 用户信息</strong>（每台电脑设置一次）：</p>
