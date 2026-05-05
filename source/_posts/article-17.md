@@ -146,11 +146,11 @@ deploy的时候又出现了问题。
 >bash
 >
 >cd D:\\Hexo
->hexo new post "我的文章"
->\# 编辑 source/\_posts/我的文章.md
+>hexo new post "article-n"
+>\# 编辑 source/\_posts/article-n.md
 >hexo clean && hexo generate && hexo deploy   \# 更新线上网站
 >git add .
->git commit \-m "发布新文章：我的文章"
+>git commit \-m "发布新文章：article-n"
 >git push origin hexo                        \# 把源码同步到 GitHub
 
 ##### 换到电脑B时，先拉取最新源码
@@ -192,3 +192,14 @@ deploy的时候又出现了问题。
 -   每台电脑只需一次初始安装，之后就是**拉取→写作→推送源码→部署网站**的循环。
     
 -   只要坚持“先 pull 再写”的纪律，两台电脑（甚至更多）都能无缝切换。
+
+---
+
+## 📋 回顾：你现在拥有的完整工作流
+
+|操作|命令|作用|
+|---|---|---|
+|1. 写文章|`hexo new post "标题"`|创建新文章|
+|2. 编辑|用编辑器修改 `source/_posts/xxx.md`|撰写内容|
+|3. 部署网站|`hexo clean && hexo generate && hexo deploy`|更新线上博客 (`master` 分支)|
+|4. 备份源码|`git add . && git commit -m "备注" && git push origin hexo`|同步文章源文件 (`hexo` 分支)|
