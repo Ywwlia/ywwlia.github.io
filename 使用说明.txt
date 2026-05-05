@@ -1,0 +1,135 @@
+HEXO文件夹
+右键-GIT BASH HERE
+hexo new post article-n #新建文章md
+
+hexo g #生成静态页面至public目录
+hexo s 预览 #s=server
+hexo d #部署到github
+hexo g + hexo d 更新blog
+hexo c【hexo clean-清除public】
+当source文件夹中的部分资源更改过之后，特别是对文件进行了删除或者路径的改变之后，需要执行这个命令，然后重新编译。
+
+组合命令
+hexo s -g #生成并本地预览
+hexo d -g #生成并上传
+
+图片放入/source/images
+![图片描述](/images/图片名称（英文orshuzi）.jpg "文字说明")
+
+插入链接
+[插入链接](https://www.zfrontier.com/app/flow/D7vlW01JQqXp)
+
+插入视频
+<iframe
+height=498 width=510
+src="http:////player.bilibili.com/player.html?aid=636416863&bvid=BV1xb4y177rr&cid=506874528&page=1"
+frameborder=0 allowfullscreen>
+</iframe>
+
+
+⭐日常的改动流程
+在本地对博客进行修改、添加新博文、修改样式等等可以参照以下流程：
+1. 依次执行git add .、git commit -m “说明文字”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；
+关联远程分支
+git push --set-upstream origin hexo
+
+2. 然后才执行hexo g -d发布网站到master分支上。虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催…的情况，调转顺序就有问题了）。
+————————————————
+版权声明：本文为CSDN博主「catalinaLi」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/a3212/article/details/80095758
+
+3. 今后无论什么时候想要在其他电脑上面用hexo写博客，就直接把创建的分支克隆下来，npm install安装依赖之后就可以用了。
+克隆分支的操作
+git clone -b hexo https://github.com/Ywwlia/ywwlia.github.io.git
+
+因为上面创建的是一个名字叫hexo的分支，所以这里-b后面的是hexo，再把后面的gitHub的地址换成你自己的hexo博客的地址就可以了。
+————————————————
+版权声明：本文为CSDN博主「LeonWuV」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/wxl1555/article/details/79293159
+
+
+⭐更换电脑的操作
+
+作者：直上云霄
+链接：https://www.zhihu.com/question/21193762/answer/489124966
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+更换电脑操作一样的，跟之前的环境搭建一样，安装git
+sudo apt-get install git
+
+设置git全局邮箱和用户名
+git config --global user.name "yourgithubname"
+git config --global user.email "yourgithubemail"
+
+设置ssh key
+ssh-keygen -t rsa -C "youremail"
+#生成后填到github和coding上（有coding平台的话）
+#验证是否成功
+ssh -T git@github.com
+ssh -T git@git.coding.net #(有coding平台的话)
+
+安装nodejs
+sudo apt-get install nodejs
+sudo apt-get install npm
+
+安装hexo  
+sudo npm install hexo-cli -g
+
+但是已经不需要初始化了，直接在任意文件夹下，
+git clone git@github.com:Ywwlia/ywwlia.github.io.git
+
+然后进入克隆到的文件夹：
+cd ywwlia.github.io
+npm install
+npm install hexo-deployer-git --save
+
+生成，部署：
+hexo g
+hexo d
+
+然后就可以开始写你的新博客了
+hexo new newpage
+
+Tips:不要忘了，每次写完最好都把源文件上传一下
+git add .
+git commit –m "xxxx"
+git push 
+
+如果是在已经编辑过的电脑上，已经有clone文件夹了，那么，每次只要和远端同步一下就行了
+git pull
+
+---
+robots.txt【如果想被搜索引擎检索】
+https://mikolaje.github.io/2019/hexo_seo.html
+---
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /archives/
+Allow: /gallery/
+Allow: /about/
+Disallow: /images/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fancybox/
+Sitemap: https://zhwangart.github.io/sitemap.xml
+Sitemap: https://zhwangart.github.io/baidusitemap.xml
+
+---
+User-Agent: *
+Disallow: /
+---
+bing不想被检索
+https://www.bing.com/webmasters/help/?topicid=37c07477
+---
+<html><head>
+<meta name="robots" content="noindex" />
+(…rest goes here…)
+</head>
+<body>…</body>
+</html>
+---
+
+
+

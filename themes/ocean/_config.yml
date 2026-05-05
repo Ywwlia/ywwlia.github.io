@@ -1,0 +1,64 @@
+# Menu
+menu:
+  主页: /
+  归档: /archives
+  相册: /gallery
+  关于: /about
+rss: /atom.xml
+
+
+# Miscellaneous
+favicon: /favicon.ico
+brand: /favicon.ico
+
+# Ocean Video
+# Because I put videos in multiple formats on the same path, I just labeled the path here.
+ocean:
+  overlay: true
+  path: /images/ocean/
+  brand: /shark-inverted.png
+
+# Content
+excerpt_link: 阅读全文...
+share_text: 分享
+search_text: 搜索
+nav_text:
+  page_prev: 上一页
+  page_next: 下一页
+  post_prev: 前一篇
+  post_next: 后一篇
+
+# Tags
+show_count: false
+
+# Toc
+toc: true
+
+# fancybox
+fancybox: true
+
+#Gitalk
+gitalk:
+  enable: false # false # 默认关闭评论 开启：true 关闭：false
+  clientID: a442ed1ef15a9cd203f6 # 申请 GitHub Application 网页上对应的 Client ID 与 Client Secret 参数
+  clientSecret: e2e12071c1a7482ecad498066047d57d75b05031 # 同上
+  repo: gitalk # 换成你创建的仓库，首先确保该仓库已经创建，其次只需要写名称，比如 "gitalk"，否则 "问题三"
+  owner: Ywwlia # 你的 Github ID（Github 用户名）
+  admin: Ywwlia # 你的 Github ID 就可以，官方注释（Facebook-like distraction free mode）说明还可以添加其他有权限的人
+
+#Valine
+valine:
+  appid: bqg6MIGxvXY0sGrOJ3vC9pOu-MdYXbMMI #Leancloud应用的appId
+  appkey: bIXkk9pD9eKEzTkgKxJVxIyV #Leancloud应用的appKey
+  notify: false #评论回复提醒
+  verify: false #验证码
+  avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: gkd！留言 #评论框占位符
+
+
+
+#leancloud
+#leancloud_visitors:
+#  enable: true
+#  appid: bqg6MIGxvXY0sGrOJ3vC9pOu-MdYXbMMI
+#  appkey: bIXkk9pD9eKEzTkgKxJVxIyV
