@@ -1,3 +1,9 @@
+桌面
+右键-GIT
+nvm list
+nvm use 10.13.0
+结束后切换回24.15.0
+
 HEXO文件夹
 右键-GIT BASH HERE
 hexo new post article-n #新建文章md
