@@ -119,3 +119,5 @@ cc switch的操作非常容易。只需要安装cc switch，给D老师上交一�
 14. 安装相应的skill。
 15. 开始使用。
 
+### P.S. ：核心内容
+学会使用AGENTS.md（CLAUDE.md）和memory.md，能够更好的使用Agent。

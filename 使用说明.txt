@@ -19,6 +19,15 @@ hexo c【hexo clean-清除public】
 hexo s -g #生成并本地预览
 hexo d -g #生成并上传
 
+Tips:不要忘了，每次写完最好都把源文件上传一下
+git add .
+git commit –m "更新文章 article-n"
+git push 
+
+如果是在已经编辑过的电脑上，已经有clone文件夹了，那么，每次只要和远端同步一下就行了
+git pull
+
+
 图片放入/source/images
 ![图片描述](/images/图片名称（英文orshuzi）.jpg "文字说明")
 
